@@ -1,5 +1,5 @@
 /// @description Initialize camera and view.
-z = -24;
+z = -32;
 cameraDirection = 0;
 shake = 0;
 max_speed = 8;

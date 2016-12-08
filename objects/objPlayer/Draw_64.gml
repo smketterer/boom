@@ -24,4 +24,5 @@ var gun_y = view_get_hport(0) - hud_scale + bob_vertical + round(random_range(-s
 
 if weapon == "pistol" then draw_sprite_ext(sprPistol,image_index,gun_x,gun_y,8,8,0,c_white,1);
 if weapon == "shotgun" then draw_sprite_ext(sprShotgun,image_index,gun_x,gun_y,8,8,0,c_white,1);
+if weapon == "chaingun" then draw_sprite_ext(sprChaingun,image_index,gun_x,gun_y,8,8,0,c_white,1);
 draw_sprite_ext(sprHud,0,view_get_wport(0)/2,view_get_hport(0),4,4,0,c_white,1);
