@@ -80,9 +80,9 @@
     "out_columns": 8,
     "out_tilehborder": 2,
     "out_tilevborder": 2,
-    "spriteId": "88f3a6b3-37b9-4311-a0df-7bd6f4df32db",
+    "spriteId": "b5032af6-61cd-4b20-902f-dd3c03c43774",
     "sprite_no_export": false,
-    "textureGroup": 0,
+    "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "tile_animation": {
         "AnimationCreationOrder": null,
         "FrameData": [

@@ -1,6 +1,6 @@
 /// @description Initialize camera and view.
 z = -32;
-cameraDirection = 0;
+camera_direction = 0;
 shake = 0;
 max_speed = 8;
 friction = .35;

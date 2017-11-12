@@ -3,14 +3,14 @@ shake = objPlayer.shake;
 x = objPlayer.x + random_range(-shake,shake);
 y = objPlayer.y + random_range(-shake,shake);
 z = objPlayer.z + random_range(-shake,shake);
-direction = objPlayer.cameraDirection;
+direction = objPlayer.camera_direction;
 
 // Apply mouselook.
 display_w=display_get_width();
 display_h=display_get_height();
 change_x=(display_mouse_get_x()-display_w/2)/9;
 display_mouse_set(display_w/2,display_h/2);
-objPlayer.cameraDirection -= change_x;
+objPlayer.camera_direction -= change_x;
 
 xx = lengthdir_x(1,direction);
 yy = lengthdir_y(1,direction);
