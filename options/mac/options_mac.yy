@@ -19,8 +19,10 @@
     "option_mac_output_dir": "~\/gamemakerStudio2",
     "option_mac_resize_window": false,
     "option_mac_scale": 0,
+    "option_mac_signing_identity": "Developer ID Application:",
     "option_mac_splash_png": "${base_options_dir}\\mac\\splash\\splash.png",
     "option_mac_start_fullscreen": false,
+    "option_mac_team_id": null,
     "option_mac_texture_page": "2048x2048",
     "option_mac_version": {
         "build": 0,

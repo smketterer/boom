@@ -1,10 +1,10 @@
-/// @description Initialize camera and view.
+/// @description Initialize camera, view, and weapon variables.
 z = -32;
 camera_direction = 0;
 shake = 0;
 max_speed = 8;
-friction = .35;
-acceleration = .75;
+friction = .45;
+acceleration = 1;
 
 window_set_cursor(cr_none);
 
@@ -25,7 +25,12 @@ view_set_camera(0, camera);
 camera_set_update_script(camera, camera_update);
 
 // Setup some player options.
+hp = 99;
+armor = 99;
 weapon = "pistol";
+cooldown = 0;
+bullets = 36;
+shells = 12;
 
 // This will work better 
 // draw_set_lighting(true);

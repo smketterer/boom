@@ -7,7 +7,7 @@ var matrix = matrix_build(x, y, z-size, 90, 90, objPlayer.camera_direction, 1, 1
 matrix_set(matrix_world, matrix);
 
 // Draw the buffer.
-var texture = sprite_get_texture(sprite_1, image_index);
+var texture = sprite_get_texture(sprite_index, image_index);
 vertex_submit(vb_billboard, pr_trianglelist, texture);
 
 // Resetting transforms can be done like this:
