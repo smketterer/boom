@@ -12,6 +12,8 @@ window_set_cursor(cr_none);
 gpu_set_ztestenable(true);
 gpu_set_zwriteenable(true);
 gpu_set_fog(true, c_black, 100, 300);
+gpu_set_alphatestenable(true);
+gpu_set_alphatestref(40);
 
 // Enable and set views to the perspective camera.
 view_enabled = true;
