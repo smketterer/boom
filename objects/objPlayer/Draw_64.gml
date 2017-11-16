@@ -36,9 +36,9 @@ if weapon == "shotgun" {
   draw_sprite_ext(sprShotgun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
 }
 if weapon == "chaingun" {
-  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 1)*8*scale_adjustment),gun_y-(17*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
-  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 4)*8*scale_adjustment),gun_y-(15*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 3)*8*scale_adjustment),gun_y-(15*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
   if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) + 1)*8*scale_adjustment),gun_y-(15*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 1)*8*scale_adjustment),gun_y-(17*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
   draw_sprite_ext(sprChaingun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
 }
 
@@ -75,6 +75,9 @@ draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_
 
 // Draw console.
 for (i=0; i<ds_list_size(messages); i++) {
+  draw_set_color(make_color_rgb(28, 28, 28));
+  draw_text_transformed(8,8 + 4 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
+  draw_set_color(make_color_rgb(199, 207, 162));
   draw_text_transformed(8,8 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
 }
 draw_set_color(c_white);
