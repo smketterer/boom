@@ -31,6 +31,7 @@ hp = 99;
 armor = 99;
 weapon = "pistol";
 cooldown = 0;
+shooting = false;
 bullets = 36;
 shells = 12;
 

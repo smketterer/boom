@@ -33,8 +33,13 @@ var gun_y = window_get_height() - hud_scale + bob_vertical + round(random_range(
 if weapon == "pistol" {
   draw_sprite_ext(sprPistol,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
 }
-if weapon == "shotgun" then draw_sprite_ext(sprShotgun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
-if weapon == "chaingun" then draw_sprite_ext(sprChaingun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+if weapon == "shotgun" {
+  draw_sprite_ext(sprShotgun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+}
+if weapon == "chaingun" {
+  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 1)*8*scale_adjustment),gun_y-(17*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+  draw_sprite_ext(sprChaingun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+}
 
 // Draw the bottom HUD.
 draw_sprite_ext(sprHud,0,window_get_width()/2,window_get_height(),4*scale_adjustment,4*scale_adjustment,0,c_white,1);
@@ -43,8 +48,8 @@ draw_sprite_ext(sprHud,0,window_get_width()/2,window_get_height(),4*scale_adjust
 // Draw the text in the HUD.
 draw_set_color(make_color_rgb(199, 207, 162));
 
-var top_row_vertical_offset = 4 * 16 * scale_adjustment;
-var bottom_row_vertical_offset = 4 * 8 * scale_adjustment;
+var top_row_vertical_offset = 4 * 17 * scale_adjustment;
+var bottom_row_vertical_offset = 4 * 9 * scale_adjustment;
 var right_column_horizontal_offset = 4 * 30 * scale_adjustment;
 var left_column_horizontal_offset = 4 * 29 * scale_adjustment;
 
@@ -65,6 +70,6 @@ switch weapon {
 // Draw health and armour.
 draw_set_halign(fa_left);
 draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-top_row_vertical_offset,hp,4*scale_adjustment,4*scale_adjustment,0);
-draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-bottom_row_vertical_offset,hp,4*scale_adjustment,4*scale_adjustment,0);
+draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-bottom_row_vertical_offset,armor,4*scale_adjustment,4*scale_adjustment,0);
 
 draw_set_color(c_white);

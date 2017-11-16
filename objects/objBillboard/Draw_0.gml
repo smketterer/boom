@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Place the matrix in the MATRIX WORLD.
 
 var matrix = matrix_build(x, y, z-size, 90, 90, objPlayer.camera_direction, 1, 1, -1);
 

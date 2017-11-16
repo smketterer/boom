@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initialize z, size, and vertex.
 
 z = 0;
 size = 16;

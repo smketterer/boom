@@ -11,6 +11,8 @@ if keyboard_check(ord("3")) then weapon = "chaingun";
 
 var is_fog = gpu_get_fog();
 
+shooting = false;
+
 if mouse_check_button(mb_left) && cooldown <= 0 {
   if weapon = "pistol" && bullets > 0 { 
     image_index = 1; // Play animation here instead.
@@ -32,6 +34,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     image_index = 1; // Play animation here instead.
     shake = 2;
     cooldown = 3;
+    shooting = true;
     bullets -= 1;
     audio_play_sound(sndPistol, 1, false);
     if is_fog[0] then gpu_set_fog(true, c_black, 100, 400);
