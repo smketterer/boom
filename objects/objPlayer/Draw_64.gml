@@ -13,11 +13,10 @@ if (palette==1)                  // Palette 1 - Original. //
     shader_set_uniform_f(shader_get_uniform(shader_gameboy,"u_color4"), 199, 207, 162);   //  Setting color 4
 }
 
-draw_surface_stretched(application_surface,0,0,window_get_width(),window_get_height()); 
-
+draw_surface_stretched(application_surface,0,0,window_get_width(),window_get_height()); // Draw game surface.
 shader_reset();  //  Disable Shader.
 
-// Misc. sizes:
+// Initialize sizes for HUD elements. Here are a few:
 // Viewport Width  = 960px
 // Viewport Height = 540px
 // Hud Height = 18px
@@ -38,6 +37,8 @@ if weapon == "shotgun" {
 }
 if weapon == "chaingun" {
   if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 1)*8*scale_adjustment),gun_y-(17*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) - 4)*8*scale_adjustment),gun_y-(15*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+  if shooting == true then draw_sprite_ext(sprMuzzleFlash,round(random(1)),gun_x+(round(random(2) + 1)*8*scale_adjustment),gun_y-(15*8*scale_adjustment)+(round(random(2) - 1)*8*scale_adjustment),8*scale_adjustment,8*scale_adjustment,0,c_white,1);
   draw_sprite_ext(sprChaingun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
 }
 
@@ -72,4 +73,8 @@ draw_set_halign(fa_left);
 draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-top_row_vertical_offset,hp,4*scale_adjustment,4*scale_adjustment,0);
 draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-bottom_row_vertical_offset,armor,4*scale_adjustment,4*scale_adjustment,0);
 
+// Draw console.
+for (i=0; i<ds_list_size(messages); i++) {
+  draw_text_transformed(8,8 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
+}
 draw_set_color(c_white);

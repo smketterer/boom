@@ -2,7 +2,7 @@
     "id": "583908cf-5523-4104-9332-254cfa9d78cd",
     "modelName": "GMTileSet",
     "mvc": "1.11",
-    "name": "ts_grass",
+    "name": "tsGrass",
     "auto_tile_sets": [
         
     ],

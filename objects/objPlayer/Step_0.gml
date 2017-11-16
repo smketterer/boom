@@ -62,3 +62,10 @@ z_speed = 1;
 if z_to < z_real {
   z -= z_speed;
 }
+
+// Console functions.
+game_timer += 1;
+if game_timer == messages_pop_at[| 0] {
+  ds_list_delete(messages, 0);
+  ds_list_delete(messages_pop_at, 0);
+}

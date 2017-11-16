@@ -6,6 +6,7 @@ max_speed = 8;
 friction = .45;
 acceleration = 1;
 
+// Reset the cursor.
 window_set_cursor(cr_none);
 
 // Setup z writing.
@@ -35,7 +36,10 @@ shooting = false;
 bullets = 36;
 shells = 12;
 
-// This will work better 
-// draw_set_lighting(true);
-// draw_light_define_point(1,x,y,z,200,c_white);
-// draw_light_enable(1,true);
+// Setup some utility variables.
+game_timer = 0;
+
+// Create the console.
+messages = ds_list_create();
+messages_pop_at = ds_list_create();
+console_log("It's time to kick ass and chew bubblegum.");
