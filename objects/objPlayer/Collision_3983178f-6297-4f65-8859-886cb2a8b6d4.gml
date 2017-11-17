@@ -3,7 +3,7 @@
 switch other.object_index {
   case objHealthPickup:
     hp += 25;
-    console_log("Picked up a health pack.");
+    console_log("Picked up a health pack");
     break;
   case objBulletPickup:
     bullets += 30;

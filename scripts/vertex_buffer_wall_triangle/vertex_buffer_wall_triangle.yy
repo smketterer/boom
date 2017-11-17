@@ -1,8 +1,8 @@
 {
-    "id": "2e165a3b-4a76-4fbf-a467-b1c4748bf775",
+    "id": "aa80bc99-8cb1-4121-ba2b-1de8e5570a79",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "vertex_buffer_wall_horizontal",
+    "name": "vertex_buffer_wall_triangle",
     "IsCompatibility": false,
     "IsDnD": false
 }

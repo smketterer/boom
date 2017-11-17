@@ -14,7 +14,7 @@ matrix_set(matrix_world, matrix);
 
 // Draw the buffer.
 var texture = sprite_get_texture(texture_sprite, texture_image);
-vertex_submit(vb_wall_horizontal, pr_trianglelist, texture);
+vertex_submit(vb_wall, pr_trianglelist, texture);
 
 // Resetting transforms can be done like this:
 matrix_set(matrix_world, matrix_build_identity());
@@ -29,7 +29,7 @@ matrix_set(matrix_world, matrix);
 
 // Draw the buffer.
 var texture = sprite_get_texture(texture_sprite, texture_image);
-vertex_submit(vb_wall_horizontal, pr_trianglelist, texture);
+vertex_submit(vb_wall, pr_trianglelist, texture);
 
 // Resetting transforms can be done like this:
 matrix_set(matrix_world, matrix_build_identity());
@@ -44,7 +44,7 @@ matrix_set(matrix_world, matrix);
 
 // Draw the buffer.
 var texture = sprite_get_texture(texture_sprite, texture_image);
-vertex_submit(vb_wall_horizontal, pr_trianglelist, texture);
+vertex_submit(vb_wall, pr_trianglelist, texture);
 
 // Resetting transforms can be done like this:
 matrix_set(matrix_world, matrix_build_identity());
@@ -59,7 +59,7 @@ matrix_set(matrix_world, matrix);
 
 // Draw the buffer.
 var texture = sprite_get_texture(texture_sprite, texture_image);
-vertex_submit(vb_wall_horizontal, pr_trianglelist, texture);
+vertex_submit(vb_wall, pr_trianglelist, texture);
 
 // Resetting transforms can be done like this:
 matrix_set(matrix_world, matrix_build_identity());

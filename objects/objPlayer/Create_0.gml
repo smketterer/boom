@@ -42,4 +42,3 @@ game_timer = 0;
 // Create the console.
 messages = ds_list_create();
 messages_pop_at = ds_list_create();
-console_log("It's time to kick ass and chew bubblegum.");

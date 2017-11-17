@@ -1,4 +1,4 @@
-/// @description Initialize vars.
+/// @description Perform inherited event.
 
 z = 0;
 size = 32;

@@ -49,8 +49,8 @@ draw_sprite_ext(sprHud,0,window_get_width()/2,window_get_height(),4*scale_adjust
 // Draw the text in the HUD.
 draw_set_color(make_color_rgb(199, 207, 162));
 
-var top_row_vertical_offset = 4 * 17 * scale_adjustment;
-var bottom_row_vertical_offset = 4 * 9 * scale_adjustment;
+var top_row_vertical_offset = 4 * 16 * scale_adjustment;
+var bottom_row_vertical_offset = 4 * 8 * scale_adjustment;
 var right_column_horizontal_offset = 4 * 30 * scale_adjustment;
 var left_column_horizontal_offset = 4 * 29 * scale_adjustment;
 
@@ -75,8 +75,9 @@ draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_
 
 // Draw console.
 for (i=0; i<ds_list_size(messages); i++) {
-  draw_set_color(make_color_rgb(28, 28, 28));
+  draw_set_color(make_color_rgb(77, 81, 60));
   draw_text_transformed(8,8 + 4 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
+  draw_text_transformed(12,8 + 4 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
   draw_set_color(make_color_rgb(199, 207, 162));
   draw_text_transformed(8,8 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
 }
