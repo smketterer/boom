@@ -1,5 +1,11 @@
 /// @description Insert description here
 
+var other_depth = layer_get_depth(other.layer);
+
+if z != other_depth {
+  exit;
+}
+
 switch other.object_index {
   case objHealthPickup:
     hp += 25;

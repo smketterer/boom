@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "1bb31308-e874-470c-b505-3d637ef59973",
+            "Value": {
+                "id": "be4c3b98-95fa-47a7-9cd0-f4481aa58913",
+                "resourcePath": "sprites\\sprStairs\\sprStairs.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1c41e6c0-5399-4d80-a084-72fcde569610",
             "Value": {
                 "id": "53e473ce-eb2a-4057-b1b0-a0567d4205d6",
@@ -207,10 +215,10 @@
             }
         },
         {
-            "Key": "5201d72d-0728-45b4-bce1-d987fdd79791",
+            "Key": "4d4c76f0-3444-4d1b-8ff8-beb0f6b4f09f",
             "Value": {
-                "id": "88b44f00-33e7-43f6-b4e8-bf7b4e40e56f",
-                "resourcePath": "rooms\\rmTest\\rmTest.yy",
+                "id": "d9227de2-a908-43b3-8117-934bdfb8da7c",
+                "resourcePath": "rooms\\rmTest1\\rmTest1.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -255,6 +263,14 @@
             }
         },
         {
+            "Key": "6467c03d-a4df-46de-bc65-7a6f27654750",
+            "Value": {
+                "id": "cc7b74fa-9240-4116-aa9d-df6e312a2be1",
+                "resourcePath": "objects\\objStairsDown\\objStairsDown.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7071afc3-8320-44af-a26a-e6256f847c2e",
             "Value": {
                 "id": "1f778be1-7ede-4d8b-a7da-f1678c9dfcc6",
@@ -268,6 +284,14 @@
                 "id": "d4c6deee-3d48-4930-b551-dc233f31e325",
                 "resourcePath": "views\\74adc3ef-c135-4464-9a48-4b90abf423ae.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7d5854d0-ad67-4af9-8af3-1d19c97d9425",
+            "Value": {
+                "id": "2a171419-2450-4eab-a5b2-2c3fff128e18",
+                "resourcePath": "sprites\\sprNode\\sprNode.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -308,6 +332,22 @@
                 "id": "04a1a182-b720-49df-b4fa-26f6aa7ef905",
                 "resourcePath": "views\\8b512bfc-d1f6-4719-9851-bed31b9d218b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9043a793-3e6b-435d-954d-9c4b1a044f1c",
+            "Value": {
+                "id": "8017be19-e108-49a0-927b-749d54270972",
+                "resourcePath": "objects\\objLayerActivate\\objLayerActivate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "91099bc2-57dd-4277-8aff-77fb441204d6",
+            "Value": {
+                "id": "c3c7f319-4f54-4fee-8be0-f4bc7cafd5fe",
+                "resourcePath": "objects\\objStairsUp\\objStairsUp.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -391,11 +431,27 @@
             }
         },
         {
+            "Key": "ab5a1e4c-008b-4d1e-bb72-c7387bd285d6",
+            "Value": {
+                "id": "16447d42-9cff-4640-b1a9-beddde5414a7",
+                "resourcePath": "objects\\objLayerDeactivate\\objLayerDeactivate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "aca25c69-10e0-40a8-afbb-0edf8dd9f35f",
             "Value": {
                 "id": "63922451-a5cf-4d3a-b32f-462fbdc4b430",
                 "resourcePath": "sprites\\sprShellPickup\\sprShellPickup.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ada4ceab-90c6-4be5-a9c1-98b732a006ab",
+            "Value": {
+                "id": "867ab919-92ec-458e-b17a-0b89d05bebd0",
+                "resourcePath": "rooms\\rmTest\\rmTest.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -523,6 +579,14 @@
             "Value": {
                 "id": "32b61623-0e52-4bda-b70c-36c84a5a9650",
                 "resourcePath": "objects\\objHealthPickup\\objHealthPickup.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e572f557-5405-4fae-90a9-f3a21e143ba1",
+            "Value": {
+                "id": "c9f0803f-d944-4d85-8372-8b133cf19095",
+                "resourcePath": "objects\\objStairs\\objStairs.yy",
                 "resourceType": "GMObject"
             }
         },

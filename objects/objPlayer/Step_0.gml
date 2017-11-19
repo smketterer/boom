@@ -20,7 +20,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     cooldown = 20;
     bullets -= 1;
     audio_play_sound(sndPistol, 1, false);
-    if is_fog[0] then gpu_set_fog(true, c_black, 100, 400);
+    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
   if weapon = "shotgun" && shells > 0 { 
     image_index = 1; // Play animation here instead.
@@ -28,7 +28,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     cooldown = 30;
     shells -= 1;
     audio_play_sound(sndShotgun, 1, false);
-    if is_fog[0] then gpu_set_fog(true, c_black, 100, 400);
+    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
   if weapon = "chaingun" && bullets > 0 {
     image_index = 1; // Play animation here instead.
@@ -37,12 +37,12 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     shooting = true;
     bullets -= 1;
     audio_play_sound(sndPistol, 1, false);
-    if is_fog[0] then gpu_set_fog(true, c_black, 100, 400);
+    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
 }
 else {
   image_index = 0;
-  if is_fog[0] then gpu_set_fog(true, c_black, 100, 300);
+  if is_fog[0] then gpu_set_fog(true, fog_color, 100, 300);
 }
 
 shake *= 0.5;
@@ -55,8 +55,9 @@ if speed > max_speed
 speed = max_speed;
 }
 
+z = round(z / 32) * 32; // Reset the z for when you're off stairs...
 z_real = -16;
-z_to = -16 + (-32*keyboard_check(vk_pageup)) + (32*keyboard_check(vk_pagedown));
+z_to = -16;
 z_speed = 1;
 
 if z_to < z_real {

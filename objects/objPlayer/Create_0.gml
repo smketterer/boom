@@ -12,7 +12,8 @@ window_set_cursor(cr_none);
 // Setup z writing.
 gpu_set_ztestenable(true);
 gpu_set_zwriteenable(true);
-gpu_set_fog(true, c_black, 100, 300);
+fog_color = c_black;
+gpu_set_fog(true, fog_color, 100, 300);
 gpu_set_alphatestenable(true);
 gpu_set_alphatestref(40);
 
@@ -33,11 +34,12 @@ armor = 99;
 weapon = "pistol";
 cooldown = 0;
 shooting = false;
-bullets = 36;
+bullets = 360;
 shells = 12;
 
 // Setup some utility variables.
 game_timer = 0;
+noclip = true;
 
 // Create the console.
 messages = ds_list_create();
