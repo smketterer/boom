@@ -37,9 +37,12 @@ shooting = false;
 bullets = 360;
 shells = 12;
 
+face_image = 8;
+emotion = "suspicious";
+
 // Setup some utility variables.
 game_timer = 0;
-noclip = true;
+no_clip = false;
 
 // Create the console.
 messages = ds_list_create();

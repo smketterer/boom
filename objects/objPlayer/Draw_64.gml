@@ -14,7 +14,7 @@ if (palette==1)                  // Palette 1 - Original. //
 }
 
 draw_surface_stretched(application_surface,0,0,window_get_width(),window_get_height()); // Draw game surface.
-shader_reset();  //  Disable Shader.
+shader_reset(); // Disable Shader.
 
 // Initialize sizes for HUD elements. Here are a few:
 // Viewport Width  = 960px
@@ -44,40 +44,37 @@ if weapon == "chaingun" {
 
 // Draw the bottom HUD.
 draw_sprite_ext(sprHud,0,window_get_width()/2,window_get_height(),4*scale_adjustment,4*scale_adjustment,0,c_white,1);
-
-
+// Draw face sprites.
+draw_sprite_ext(sprFaces,face_image,window_get_width()/2,window_get_height(),4*scale_adjustment,4*scale_adjustment,0,c_white,1);
 // Draw the text in the HUD.
 draw_set_color(make_color_rgb(199, 207, 162));
 
-var top_row_vertical_offset = 4 * 16 * scale_adjustment;
-var bottom_row_vertical_offset = 4 * 8 * scale_adjustment;
-var right_column_horizontal_offset = 4 * 30 * scale_adjustment;
-var left_column_horizontal_offset = 4 * 29 * scale_adjustment;
+var vertical_offset = 4 * 18 * scale_adjustment;
+var ammo_offset = 88;
+var health_offset = 48;
+var armor_offset = 39;
 
 // Draw the ammo.
 draw_set_halign(fa_right);
 switch weapon {
   case "pistol":
-    draw_text_transformed(window_get_width()/2+right_column_horizontal_offset,window_get_height()-top_row_vertical_offset,bullets,4*scale_adjustment,4*scale_adjustment,0);
+    draw_text_transformed((-ammo_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,bullets,4*scale_adjustment,4*scale_adjustment,0);
     break;
   case "chaingun":
-    draw_text_transformed(window_get_width()/2+right_column_horizontal_offset,window_get_height()-top_row_vertical_offset,bullets,4*scale_adjustment,4*scale_adjustment,0);
+    draw_text_transformed((-ammo_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,bullets,4*scale_adjustment,4*scale_adjustment,0);
     break;
   case "shotgun":
-    draw_text_transformed(window_get_width()/2+right_column_horizontal_offset,window_get_height()-top_row_vertical_offset,shells,4*scale_adjustment,4*scale_adjustment,0);
+    draw_text_transformed((-ammo_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,shells,4*scale_adjustment,4*scale_adjustment,0);
     break;
 }
 
 // Draw health and armour.
 draw_set_halign(fa_left);
-draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-top_row_vertical_offset,hp,4*scale_adjustment,4*scale_adjustment,0);
-draw_text_transformed(window_get_width()/2-left_column_horizontal_offset,window_get_height()-bottom_row_vertical_offset,armor,4*scale_adjustment,4*scale_adjustment,0);
+draw_text_transformed((-health_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,hp,4*scale_adjustment,4*scale_adjustment,0);
+draw_text_transformed((armor_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,armor,4*scale_adjustment,4*scale_adjustment,0);
 
 // Draw console.
 for (i=0; i<ds_list_size(messages); i++) {
-  draw_set_color(make_color_rgb(77, 81, 60));
-  draw_text_transformed(8,8 + 4 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
-  draw_text_transformed(12,8 + 4 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
   draw_set_color(make_color_rgb(199, 207, 162));
   draw_text_transformed(8,8 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
 }

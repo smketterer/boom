@@ -1,6 +1,6 @@
 /// @description Just bounce against blocks for now.
 
-if noclip then exit;
+if no_clip then exit;
 
 var other_depth = layer_get_depth(other.layer);
 

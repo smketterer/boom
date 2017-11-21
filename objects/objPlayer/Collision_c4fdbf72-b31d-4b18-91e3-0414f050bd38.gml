@@ -18,6 +18,16 @@ switch other.object_index {
       z = (y - other.y) + layer_get_depth(other.layer); 
     }
     break;
+  case objStairsRight:
+    if z != (other.x - x) + layer_get_depth(other.layer) {
+      z = (other.x - x) + layer_get_depth(other.layer); 
+    }
+    break;
+  case objStairsLeft:
+    if z != (x - other.x) + layer_get_depth(other.layer) {
+      z = (x - other.x) + layer_get_depth(other.layer); 
+    }
+    break;
 }
 
 if not place_meeting(x+hspeed,y+vspeed,other) {

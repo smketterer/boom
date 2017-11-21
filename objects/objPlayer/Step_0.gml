@@ -70,3 +70,27 @@ if game_timer == messages_pop_at[| 0] {
   ds_list_delete(messages, 0);
   ds_list_delete(messages_pop_at, 0);
 }
+
+// HUD face animations.
+switch (emotion) {
+  case "suspicious":
+    if game_timer % 180 == 0 {
+      if face_image == 1 {
+        face_image = 0;
+        exit;
+      } else {
+        face_image = 1;
+      }
+    }
+    break;
+  case "angry":
+    face_image = 2;
+    break;
+  case "happy":
+    face_image = 3;
+    break;
+  default:
+    emotion = "suspicious";
+    face_image = 0;
+    break;
+}

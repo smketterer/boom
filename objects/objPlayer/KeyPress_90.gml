@@ -1,2 +1,2 @@
-/// @description Insert description here
+/// @description **DEBUG**
 console_log("Player Z: " + string(z));
