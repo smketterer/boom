@@ -26,7 +26,7 @@ var hud_scale = 18 * 4 * scale_adjustment;
 var bob_vertical = round(sin(current_time/250) * abs((speed/max_speed) * 4)) * 8 * scale_adjustment;
 var bob_horizontal = round(cos(current_time/500) * abs((speed/max_speed) * 4)) * 8 * scale_adjustment;
 var gun_x = window_get_width()/2 + bob_horizontal + round(random_range(-shake,shake)) * 8 * scale_adjustment;
-var gun_y = window_get_height() - hud_scale + bob_vertical + round(random_range(-shake,shake)) * 8 * scale_adjustment;
+var gun_y = window_get_height()+(round(hud_offset/8 - (hud_offset / 2)/8)*8)- 4 - hud_scale + bob_vertical + round(random_range(-shake,shake)) * 8 * scale_adjustment;
 
 // Draw the weapons.
 if weapon == "pistol" {
@@ -42,36 +42,49 @@ if weapon == "chaingun" {
   draw_sprite_ext(sprChaingun,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
 }
 
+// Toggle the HUD.
+if !hud_on and hud_offset != 24*4*scale_adjustment {
+  hud_offset += 16*scale_adjustment;
+  if hud_offset > 24*4*scale_adjustment {
+    hud_offset = 24*4*scale_adjustment;
+  }
+}
+if hud_on and hud_offset != 0 {
+  hud_offset -= 16*scale_adjustment;
+  if hud_offset < 0 {
+    hud_offset = 0;
+  }
+}
 // Draw the bottom HUD.
-draw_sprite_ext(sprHud,0,window_get_width()/2,window_get_height(),4*scale_adjustment,4*scale_adjustment,0,c_white,1);
+draw_sprite_ext(sprHud,0,window_get_width()/2,window_get_height()+hud_offset,4*scale_adjustment,4*scale_adjustment,0,c_white,1);
 // Draw face sprites.
-draw_sprite_ext(sprFaces,face_image,window_get_width()/2,window_get_height(),4*scale_adjustment,4*scale_adjustment,0,c_white,1);
+draw_sprite_ext(sprFaces,face_image,window_get_width()/2,window_get_height()+hud_offset,4*scale_adjustment,4*scale_adjustment,0,c_white,1);
 // Draw the text in the HUD.
 draw_set_color(make_color_rgb(199, 207, 162));
 
-var vertical_offset = 4 * 18 * scale_adjustment;
-var ammo_offset = 88;
-var health_offset = 48;
-var armor_offset = 39;
+var vertical_offset = 4 * 20 * scale_adjustment;
+var ammo_offset = 111;
+var health_offset = 60;
+var armor_offset = 28;
 
 // Draw the ammo.
 draw_set_halign(fa_right);
 switch weapon {
   case "pistol":
-    draw_text_transformed((-ammo_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,bullets,4*scale_adjustment,4*scale_adjustment,0);
+    draw_bitmap_numbers(bullets, (-ammo_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
     break;
   case "chaingun":
-    draw_text_transformed((-ammo_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,bullets,4*scale_adjustment,4*scale_adjustment,0);
+    draw_bitmap_numbers(bullets, (-ammo_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
     break;
   case "shotgun":
-    draw_text_transformed((-ammo_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,shells,4*scale_adjustment,4*scale_adjustment,0);
+    draw_bitmap_numbers(shells, (-ammo_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
     break;
 }
 
 // Draw health and armour.
 draw_set_halign(fa_left);
-draw_text_transformed((-health_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,hp,4*scale_adjustment,4*scale_adjustment,0);
-draw_text_transformed((armor_offset*4*scale_adjustment)+window_get_width()/2,window_get_height()-vertical_offset,armor,4*scale_adjustment,4*scale_adjustment,0);
+draw_bitmap_numbers(hp, (-health_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
+draw_bitmap_numbers(armor, (armor_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
 
 // Draw console.
 for (i=0; i<ds_list_size(messages); i++) {

@@ -94,3 +94,7 @@ switch (emotion) {
     face_image = 0;
     break;
 }
+
+if keyboard_check_pressed(vk_tab) {
+  hud_on = !hud_on;
+}
