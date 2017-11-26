@@ -1,3 +1,5 @@
 /// @description Get rid of overlapping solids.
 
-if abs(z - objPlayer.z) >= 64 then solid = false;
+if z != z_to {
+  z -= sign(z - z_to) * 8;
+}

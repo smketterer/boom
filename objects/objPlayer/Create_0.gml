@@ -39,8 +39,9 @@ shells = 12;
 
 face_image = 8;
 emotion = "suspicious";
-hud_on = false;
+hud_on = true;
 hud_offset = 0;
+alarm[0] = 60;
 
 // Setup some utility variables.
 game_timer = 0;
