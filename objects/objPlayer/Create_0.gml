@@ -4,7 +4,7 @@ camera_direction = 0;
 shake = 0;
 max_speed = 8;
 friction = .45;
-acceleration = 1;
+acceleration = 1.5;
 
 // Reset the cursor.
 window_set_cursor(cr_none);
