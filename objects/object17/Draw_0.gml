@@ -1,5 +1,4 @@
 /// @description Place the matrix in the MATRIX WORLD.
-
 var matrix = matrix_build(x, y, z-(size*3/4), 90, 90, objPlayer.camera_direction, 3/4, 3/4, -3/4);
 
 // The world matrix is what is used to transform drawing within "world" or "object" space.

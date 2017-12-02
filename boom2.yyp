@@ -114,7 +114,7 @@
             "Key": "1e5c724a-744e-423f-bcc3-b0772297642f",
             "Value": {
                 "id": "7ea63c21-ff00-4629-b6eb-f9a10582366f",
-                "resourcePath": "objects\\objAngle2\\objAngle2.yy",
+                "resourcePath": "objects\\objBlockAngle2\\objBlockAngle2.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -503,14 +503,6 @@
             }
         },
         {
-            "Key": "a0a304b0-c8b4-429c-88ee-816e6903f163",
-            "Value": {
-                "id": "d0a0271f-562a-4155-a9ee-6dbbc662457f",
-                "resourcePath": "views\\a0a304b0-c8b4-429c-88ee-816e6903f163.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "a26bc8b1-54f1-47e0-a0e2-f816410dca05",
             "Value": {
                 "id": "c65e5e1c-52bd-4809-964d-139784e34160",
@@ -530,7 +522,7 @@
             "Key": "a9cfcb2c-0e86-48eb-ad56-75378e9c0b98",
             "Value": {
                 "id": "f993d979-45ea-42db-8ea6-e69f6cf015f6",
-                "resourcePath": "objects\\objAngle1\\objAngle1.yy",
+                "resourcePath": "objects\\objBlockAngle1\\objBlockAngle1.yy",
                 "resourceType": "GMObject"
             }
         },

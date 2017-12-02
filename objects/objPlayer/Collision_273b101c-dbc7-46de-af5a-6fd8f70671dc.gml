@@ -30,6 +30,15 @@ switch other.object_index {
       motion_add(180, abs(hspeed));
       break;
     }
+  case objBlockAngle1:
+    if hspeed > 0 {
+      // mess around with collision_line
+      motion_add(135, sqrt(abs(hspeed)^2 + abs(vspeed)^2));
+      break;
+    } else {
+      motion_add(315, sqrt(abs(hspeed)^2 + abs(vspeed)^2));
+      break;
+    }
 }
 
 //move_outside_solid(direction, max_speed);

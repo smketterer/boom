@@ -2,7 +2,7 @@
     "id": "a9cfcb2c-0e86-48eb-ad56-75378e9c0b98",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objAngle1",
+    "name": "objBlockAngle1",
     "eventList": [
         {
             "id": "e6582300-358d-4bd9-ac56-1f8c0384b3ba",
