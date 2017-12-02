@@ -34,6 +34,11 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     cooldown = 30;
     shells -= 1;
     damage = 100;
+    range = 64*4;
+    var enemy = raycast(x, y, camera_direction, range, objEnemy);
+    if enemy != noone {
+      enemy.hp -= damage;
+    }
     audio_play_sound(sndShotgun, 1, false);
     if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
@@ -44,6 +49,11 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     shooting = true;
     bullets -= 1;
     damage = 10;
+    range = 64*10;
+    var enemy = raycast(x, y, camera_direction, range, objEnemy);
+    if enemy != noone {
+      enemy.hp -= damage;
+    }
     audio_play_sound(sndPistol, 1, false);
     if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }

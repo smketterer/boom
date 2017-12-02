@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "a3a2c445-00c0-4cbd-911e-ea46f42bed8a",
+            "Value": {
+                "id": "6284b3d6-4cb8-459f-82b5-2029e51a9347",
+                "resourcePath": "scripts\\sleep\\sleep.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "a4c1c78b-4749-4048-baff-5ce6390ec81d",
@@ -926,7 +934,8 @@
         "2e165a3b-4a76-4fbf-a467-b1c4748bf775",
         "2c478d28-7443-4a1d-b550-be1f33838624",
         "50496697-81ec-430a-b2a6-301f6a9bb491",
-        "2af95752-9608-48fa-b9fa-fe7a5751291e"
+        "2af95752-9608-48fa-b9fa-fe7a5751291e",
+        "a3a2c445-00c0-4cbd-911e-ea46f42bed8a"
     ],
     "tutorial": ""
 }

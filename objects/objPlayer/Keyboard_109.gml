@@ -1,2 +1,2 @@
 /// @description Insert description here
-hp -= 1;
+room_speed -= 1;

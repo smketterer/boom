@@ -5,6 +5,7 @@ shake = 0;
 max_speed = 8;
 friction = .45;
 acceleration = 1.5;
+room_speed = 40;
 
 // Reset the cursor.
 window_set_cursor(cr_none);
