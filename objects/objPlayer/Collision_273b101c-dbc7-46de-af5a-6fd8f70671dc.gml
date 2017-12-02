@@ -10,11 +10,11 @@ if z != other_depth && abs(other_depth - round(z)) >= 64 {
 }
 
 other.solid = true;
-x = xprevious;
-y = yprevious;
 
 switch other.object_index {
   case objBlockHorizontal:
+    x = xprevious;
+    y = yprevious;
     if other.y < y {
       motion_add(270, abs(vspeed));
       break;
@@ -23,6 +23,8 @@ switch other.object_index {
       break;
     }
   case objBlockVertical:
+    x = xprevious;
+    y = yprevious;
     if other.x < x {
       motion_add(0, abs(hspeed));
       break;
@@ -31,8 +33,10 @@ switch other.object_index {
       break;
     }
   case objBlockAngle1:
-    if hspeed > 0 {
-      // mess around with collision_line
+    // TODO: FIX THIS
+    x = xprevious;
+    y = yprevious;
+    if hspeed >= 0 and vspeed <= 0 {
       motion_add(135, sqrt(abs(hspeed)^2 + abs(vspeed)^2));
       break;
     } else {
@@ -40,7 +44,3 @@ switch other.object_index {
       break;
     }
 }
-
-//move_outside_solid(direction, max_speed);
-//move_bounce_solid(true);
-//speed /= 2;
