@@ -13,8 +13,6 @@ other.solid = true;
 
 switch other.object_index {
   case objBlockHorizontal:
-    x = xprevious;
-    y = yprevious;
     if other.y < y {
       motion_add(270, abs(vspeed));
       break;
@@ -23,8 +21,6 @@ switch other.object_index {
       break;
     }
   case objBlockVertical:
-    x = xprevious;
-    y = yprevious;
     if other.x < x {
       motion_add(0, abs(hspeed));
       break;
@@ -32,15 +28,24 @@ switch other.object_index {
       motion_add(180, abs(hspeed));
       break;
     }
-  case objBlockAngle1:
-    // TODO: FIX THIS
+  case objBlockAngle1LeftUp:
     x = xprevious;
     y = yprevious;
-    if hspeed >= 0 and vspeed <= 0 {
-      motion_add(135, sqrt(abs(hspeed)^2 + abs(vspeed)^2));
-      break;
-    } else {
-      motion_add(315, sqrt(abs(hspeed)^2 + abs(vspeed)^2));
-      break;
-    }
+    motion_add(135, speed/2);
+    break;
+  case objBlockAngle1RightDown:
+    x = xprevious;
+    y = yprevious;
+    motion_add(315, speed/2);
+    break;
+  case objBlockAngle2LeftDown:
+    x = xprevious;
+    y = yprevious;
+    motion_add(225, speed/2);
+    break;
+  case objBlockAngle2RightUp:
+    x = xprevious;
+    y = yprevious;
+    motion_add(45, speed/2);
+    break;
 }

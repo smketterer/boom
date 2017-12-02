@@ -1,2 +1,2 @@
 /// @description Toggle HUD.
-hud_on = !hud_on;
+hud_on = false;

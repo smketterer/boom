@@ -1,4 +1,4 @@
-// @arg string
+/// @arg string
 
 var duration = 120;
 

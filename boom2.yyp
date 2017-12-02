@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "2af95752-9608-48fa-b9fa-fe7a5751291e",
+            "Value": {
+                "id": "fd6b83ae-ba74-4704-8c02-e89e590704ea",
+                "resourcePath": "scripts\\raycast\\raycast.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2b70178f-0517-4654-9dec-958ad4c5311b",
             "Value": {
                 "id": "1614105e-e3c5-4375-9d31-159c79c6e765",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "3c4aced6-b229-4b4b-98ca-c39437d64664",
+            "Value": {
+                "id": "1d0dd540-6458-4527-b8c4-0c3c6f55de9d",
+                "resourcePath": "sprites\\sprAngle1\\sprAngle1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "44765f8f-c801-4f77-80fd-ebd8df26fdf0",
             "Value": {
                 "id": "2a957f43-ee98-4bc1-8d84-217dcd2ddff3",
@@ -231,6 +247,14 @@
             }
         },
         {
+            "Key": "4664755d-f193-48b7-8204-4970ef5a4786",
+            "Value": {
+                "id": "e616ea4d-bc28-4564-950b-5d96246b3bc1",
+                "resourcePath": "objects\\objBlockAngle2RightUp\\objBlockAngle2RightUp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "470fd4fe-1267-4b63-a165-d92bc3e72983",
             "Value": {
                 "id": "d309421e-4600-4e76-8f4e-fb19cf16aaeb",
@@ -242,7 +266,7 @@
             "Key": "474c5540-820f-47a9-a8c2-5ff50c53f874",
             "Value": {
                 "id": "eca09ddd-02f0-408e-8351-4f0e047df2cf",
-                "resourcePath": "objects\\object17\\object17.yy",
+                "resourcePath": "objects\\objTestEnemySmall\\objTestEnemySmall.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -311,10 +335,18 @@
             }
         },
         {
+            "Key": "63a83240-051c-43da-8420-8a45eec7966f",
+            "Value": {
+                "id": "52267aed-e1cc-42d8-9764-5e11c997d384",
+                "resourcePath": "sprites\\sprCircleLarge\\sprCircleLarge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "64472efa-d73d-48d7-aedf-8d92e553fac0",
             "Value": {
                 "id": "961b04cb-847e-4525-bfa2-e98d11688c42",
-                "resourcePath": "sprites\\sprAngle1\\sprAngle1.yy",
+                "resourcePath": "sprites\\sprAngle1LeftUp\\sprAngle1LeftUp.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -335,6 +367,22 @@
             }
         },
         {
+            "Key": "6727c1f4-3a47-4256-9b49-6da9b98f4414",
+            "Value": {
+                "id": "5d8bdbf4-66ee-4abc-82b9-301a00ec323f",
+                "resourcePath": "sprites\\sprTestEnemy1\\sprTestEnemy1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "69f7c2c4-1883-495f-8c30-14a14a9e43a4",
+            "Value": {
+                "id": "54f304bb-ee23-454c-ae3e-9eff23eb282b",
+                "resourcePath": "sprites\\sprAngle1RightDown\\sprAngle1RightDown.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6d46a258-69d2-455b-8e4f-02cb2a235406",
             "Value": {
                 "id": "7036f468-288f-44e7-997c-60f45d565424",
@@ -343,11 +391,11 @@
             }
         },
         {
-            "Key": "7071afc3-8320-44af-a26a-e6256f847c2e",
+            "Key": "7058ddda-16dd-48d6-845e-d480b59dec50",
             "Value": {
-                "id": "1f778be1-7ede-4d8b-a7da-f1678c9dfcc6",
-                "resourcePath": "scripts\\move\\move.yy",
-                "resourceType": "GMScript"
+                "id": "c799cfe6-b192-40fb-bfa0-226361e8a8ce",
+                "resourcePath": "sprites\\sprAngle2LeftDown\\sprAngle2LeftDown.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -356,6 +404,14 @@
                 "id": "d4c6deee-3d48-4930-b551-dc233f31e325",
                 "resourcePath": "views\\74adc3ef-c135-4464-9a48-4b90abf423ae.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "797b6658-036c-4eac-ab2b-88e48b745653",
+            "Value": {
+                "id": "a36b020f-9c37-4bb3-add7-a56b2ea09267",
+                "resourcePath": "objects\\objTestEnemyLarge\\objTestEnemyLarge.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -455,6 +511,14 @@
             }
         },
         {
+            "Key": "96ff4b69-c04d-47c7-bac9-9238391c5257",
+            "Value": {
+                "id": "65421c42-df1f-40dc-bbf6-62f5e40acebc",
+                "resourcePath": "objects\\objBlockAngle1LeftUp\\objBlockAngle1LeftUp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "975e0fd8-bbb5-477d-9f70-128f9ecede87",
             "Value": {
                 "id": "0fb1f7e6-ac85-4379-a8c4-cd55f6d08e05",
@@ -495,6 +559,14 @@
             }
         },
         {
+            "Key": "9cca1c76-1557-4305-807d-d8aa200a7be8",
+            "Value": {
+                "id": "4919fd17-323f-45f5-b6e3-3db7b77993e1",
+                "resourcePath": "sprites\\sprAngle2\\sprAngle2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9fe92aae-7fa3-423b-91f4-7d0032f591fe",
             "Value": {
                 "id": "1457a981-7f9d-4b90-8f15-7d3159ab98bd",
@@ -524,14 +596,6 @@
                 "id": "f993d979-45ea-42db-8ea6-e69f6cf015f6",
                 "resourcePath": "objects\\objBlockAngle1\\objBlockAngle1.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "aa80bc99-8cb1-4121-ba2b-1de8e5570a79",
-            "Value": {
-                "id": "149901c3-8b1c-4d0c-8cfc-d096c321dfa6",
-                "resourcePath": "scripts\\vertex_buffer_wall_triangle\\vertex_buffer_wall_triangle.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -572,6 +636,14 @@
                 "id": "6554cdd6-2f19-4c2c-bb99-ff5a73ea8f2d",
                 "resourcePath": "sprites\\sprBulletPickup\\sprBulletPickup.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b4e21a00-37fe-4cee-8ff7-040915c7d396",
+            "Value": {
+                "id": "07ee2edc-d73c-43a9-9b2b-50ecac9f9bf3",
+                "resourcePath": "objects\\objBlockAngle1RightDown\\objBlockAngle1RightDown.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -684,6 +756,14 @@
                 "id": "ecb74aa1-2227-47f4-b0e7-705b88568321",
                 "resourcePath": "sprites\\sprFaces\\sprFaces.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dce5d705-6759-422a-8f41-0460c47fdb12",
+            "Value": {
+                "id": "427f7228-f869-444b-ab55-2abfce5071a4",
+                "resourcePath": "views\\dce5d705-6759-422a-8f41-0460c47fdb12.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -807,6 +887,14 @@
             }
         },
         {
+            "Key": "f9ada859-80ed-43ac-865b-bf61c48e30bb",
+            "Value": {
+                "id": "1584eddd-c065-4151-9116-d00c5f290b1f",
+                "resourcePath": "objects\\objBlockAngle2LeftDown\\objBlockAngle2LeftDown.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fbf508b7-ee71-4da2-8e47-368f29ebdaf9",
             "Value": {
                 "id": "3960b501-6b94-4d56-bd7e-55adeef6ed72",
@@ -826,20 +914,19 @@
             "Key": "fefaae7a-a83d-4d87-9b04-98bda719bd2f",
             "Value": {
                 "id": "688e7738-8eb2-4fd5-a61c-11d48dbe4809",
-                "resourcePath": "sprites\\sprAngle2\\sprAngle2.yy",
+                "resourcePath": "sprites\\sprAngle2RightUp\\sprAngle2RightUp.yy",
                 "resourceType": "GMSprite"
             }
         }
     ],
     "script_order": [
         "1f50d506-5173-4b5c-add7-8754e435fa6d",
-        "7071afc3-8320-44af-a26a-e6256f847c2e",
         "9fe92aae-7fa3-423b-91f4-7d0032f591fe",
         "8698436c-06af-4542-b804-42ce3cbed178",
         "2e165a3b-4a76-4fbf-a467-b1c4748bf775",
-        "aa80bc99-8cb1-4121-ba2b-1de8e5570a79",
         "2c478d28-7443-4a1d-b550-be1f33838624",
-        "50496697-81ec-430a-b2a6-301f6a9bb491"
+        "50496697-81ec-430a-b2a6-301f6a9bb491",
+        "2af95752-9608-48fa-b9fa-fe7a5751291e"
     ],
     "tutorial": ""
 }

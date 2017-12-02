@@ -19,6 +19,12 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     shake = 2;
     cooldown = 20;
     bullets -= 1;
+    damage = 10;
+    range = 64*10;
+    var enemy = raycast(x, y, camera_direction, range, objEnemy);
+    if enemy != noone {
+      enemy.hp -= damage;
+    }
     audio_play_sound(sndPistol, 1, false);
     if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
@@ -27,6 +33,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     shake = 10;
     cooldown = 30;
     shells -= 1;
+    damage = 100;
     audio_play_sound(sndShotgun, 1, false);
     if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
@@ -36,6 +43,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     cooldown = 3;
     shooting = true;
     bullets -= 1;
+    damage = 10;
     audio_play_sound(sndPistol, 1, false);
     if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
   }
@@ -74,12 +82,28 @@ if game_timer == messages_pop_at[| 0] {
 // HUD face animations.
 switch (emotion) {
   case "suspicious":
+    if hp > 50 {
+      face_image = 0;
+    } else if hp > 25 {
+      face_image = 4;
+    } else if hp > 0 {
+      face_image = 7;
+    }
     if game_timer % 180 == 0 {
-      if face_image == 1 {
-        face_image = 0;
-        exit;
-      } else {
-        face_image = 1;
+      if hp > 50 {
+        if face_image == 1 {
+          face_image = 0;
+          exit;
+        } else {
+          face_image = 1;
+        }
+      } else if hp > 25 {
+        if face_image == 5 {
+          face_image = 4;
+          exit;
+        } else {
+          face_image = 5;
+        }
       }
     }
     break;
@@ -95,6 +119,7 @@ switch (emotion) {
     break;
 }
 
+// Toggle the HUD.
 if keyboard_check_pressed(vk_tab) {
   hud_on = !hud_on;
 }

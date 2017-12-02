@@ -1,7 +1,7 @@
-// @arg number
-// @arg x
-// @arg y
-// @arg scale
+/// @arg number
+/// @arg x
+/// @arg y
+/// @arg scale
 
 var string_number = string(argument0);
 
