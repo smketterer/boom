@@ -82,12 +82,15 @@ switch weapon {
 }
 
 // Draw health and armour.
-draw_set_halign(fa_left);
 draw_bitmap_numbers(hp, (-health_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
 draw_bitmap_numbers(armor, (armor_offset*4*scale_adjustment)+window_get_width()/2, window_get_height()+hud_offset-vertical_offset, 4*scale_adjustment);
 
 // Draw console.
 for (i=0; i<ds_list_size(messages); i++) {
+  draw_set_halign(fa_left);
+  draw_set_color(make_color_rgb(77, 81, 60));
+  draw_text_transformed(8,8+4*scale_adjustment + (i*(8)*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
+  draw_text_transformed(8+4*scale_adjustment,8+4*scale_adjustment + (i*(8)*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
   draw_set_color(make_color_rgb(199, 207, 162));
   draw_text_transformed(8,8 + (i*8*4*scale_adjustment), messages[| i], 4*scale_adjustment, 4*scale_adjustment, 0);
 }
