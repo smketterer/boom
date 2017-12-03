@@ -3,10 +3,6 @@
 // Set the texture.
 var texture_image = image_index;
 
-// This is from the internet somewhere.
-
-
-
 // North-west-facing
 var matrix = matrix_build(x+size, y+size, z-size, 90, -45, 0, -1.41421356237, 1.41421356237, -1);
 

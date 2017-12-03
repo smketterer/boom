@@ -32,8 +32,4 @@ switch other.object_index {
 
 if not place_meeting(x+hspeed,y+vspeed,other) {
   z = round(z / other.size) * other.size;
-  with (objBlock) {
-    var block_depth = layer_get_depth(layer);
-    if block_depth != objPlayer.z then solid = false;
-  }
 }

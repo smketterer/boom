@@ -21,7 +21,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     bullets -= 1;
     damage = 10;
     range = 64*10;
-    var enemy = raycast(x, y, camera_direction, range, objEnemy);
+    var enemy = raycast(x, y, z, camera_direction, range, objEnemy);
     if enemy != noone {
       enemy.hp -= damage;
     }
@@ -35,7 +35,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     shells -= 1;
     damage = 100;
     range = 64*4;
-    var enemy = raycast(x, y, camera_direction, range, objEnemy);
+    var enemy = raycast(x, y, z, camera_direction, range, objEnemy);
     if enemy != noone {
       enemy.hp -= damage;
     }
@@ -50,7 +50,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
     bullets -= 1;
     damage = 10;
     range = 64*10;
-    var enemy = raycast(x, y, camera_direction, range, objEnemy);
+    var enemy = raycast(x, y, z, camera_direction, range, objEnemy);
     if enemy != noone {
       enemy.hp -= damage;
     }
