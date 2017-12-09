@@ -6,8 +6,8 @@ var texture_image = image_index;
 // This is from the internet somewhere.
 
 
-// North-facing
-var matrix = matrix_build(x+size, y, z-size, 90, 0, 0, -1, 1, -1);
+// West-facing
+var matrix = matrix_build(x, y+size, z-size, 90, 90, 0, 1, 1, -1);
 
 // The world matrix is what is used to transform drawing within "world" or "object" space.
 matrix_set(matrix_world, matrix);
@@ -21,8 +21,8 @@ matrix_set(matrix_world, matrix_build_identity());
 
 
 
-// South-facing
-var matrix = matrix_build(x+size, y+(size/4), z-size, 90, 0, 0, 1, 1, -1);
+// East-facing
+var matrix = matrix_build(x+(size/4), y+size, z-size, 90, 90, 0, 1, 1, -1);
 
 // The world matrix is what is used to transform drawing within "world" or "object" space.
 matrix_set(matrix_world, matrix);
@@ -36,7 +36,7 @@ matrix_set(matrix_world, matrix_build_identity());
 
 
 // Floor.
-var matrix = matrix_build(x+size, y+(size/8), z, 180, 0, 0, -1, 1/8, -1);
+var matrix = matrix_build(x+(size/8), y+size, z, 180, 0, 0, 1/8, 1, -1);
 
 // The world matrix is what is used to transform drawing within "world" or "object" space.
 matrix_set(matrix_world, matrix);

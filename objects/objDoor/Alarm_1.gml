@@ -1,3 +1,3 @@
-/// @description Insert description here
+/// @description Raise door.
 z_to = layer_get_depth(layer) + 32 - (size*2);
 alarm[0] = 120;

@@ -23,8 +23,8 @@ void main()     //  Where the magic happens
   vec4 tempCol = texture2D( gm_BaseTexture, v_vTexcoord ); 
     
   //  Grabbing color intensity. - Uncomment/Comment each method to enable/disable. //
-  float colIntensity = max(tempCol.r,max(tempCol.g,tempCol.b));     //Intensity Method 1 - HSV Value.
-  //float colIntensity = (tempCol.r+tempCol.g+tempCol.b)/3.0;       //Intensity Method 2 - Average.
+  // float colIntensity = max(tempCol.r,max(tempCol.g,tempCol.b));     //Intensity Method 1 - HSV Value.
+  float colIntensity = (tempCol.r+tempCol.g+tempCol.b)/3.0;       //Intensity Method 2 - Average.
     
   //  Assigning Colors.  //
   float val=1.0;                                     //Color 1 is the default, and will remain so if no value is found.

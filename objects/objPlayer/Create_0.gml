@@ -1,4 +1,4 @@
-/// @description Initialize camera, view, and weapon variables.
+/// @description Initialize game variables.
 z = -32;
 camera_direction = 0;
 shake = 0;

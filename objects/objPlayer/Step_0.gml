@@ -1,19 +1,26 @@
-/// @description Move and shoot.
+/// @description Handle keys, move and shoot.
 
 if keyboard_check(ord("W")) then motion_add(camera_direction,acceleration);
 if keyboard_check(ord("A")) then motion_add(camera_direction+90,acceleration);
 if keyboard_check(ord("S")) then motion_add(camera_direction,-acceleration);
 if keyboard_check(ord("D")) then motion_add(camera_direction+90,-acceleration);
 
-if keyboard_check(ord("1")) then weapon = "pistol";
-if keyboard_check(ord("2")) then weapon = "shotgun";
-if keyboard_check(ord("3")) then weapon = "chaingun";
+if keyboard_check(ord("R")) then game_restart();
+if keyboard_check(vk_escape) then game_end();
+
+if keyboard_check(ord("1")) then weapon = "fists";
+if keyboard_check(ord("2")) then weapon = "pistol";
+if keyboard_check(ord("3")) then weapon = "shotgun";
+if keyboard_check(ord("4")) then weapon = "chaingun";
 
 var is_fog = gpu_get_fog();
 
 shooting = false;
 
 if mouse_check_button(mb_left) && cooldown <= 0 {
+  if weapon = "fists" {
+    image_index = 1;
+  }
   if weapon = "pistol" && bullets > 0 { 
     image_index = 1; // Play animation here instead.
     shake = 2;
@@ -26,7 +33,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
       enemy.hp -= damage;
     }
     audio_play_sound(sndPistol, 1, false);
-    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
+    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 480);
   }
   if weapon = "shotgun" && shells > 0 { 
     image_index = 1; // Play animation here instead.
@@ -40,7 +47,7 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
       enemy.hp -= damage;
     }
     audio_play_sound(sndShotgun, 1, false);
-    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
+    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 480);
   }
   if weapon = "chaingun" && bullets > 0 {
     image_index = 1; // Play animation here instead.
@@ -55,12 +62,23 @@ if mouse_check_button(mb_left) && cooldown <= 0 {
       enemy.hp -= damage;
     }
     audio_play_sound(sndPistol, 1, false);
-    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 400);
+    if is_fog[0] then gpu_set_fog(true, fog_color, 100, 480);
   }
 }
 else {
   image_index = 0;
-  if is_fog[0] then gpu_set_fog(true, fog_color, 100, 300);
+  if is_fog[0] then gpu_set_fog(true, fog_color, 100, 320);
+}
+
+// Open doors.
+if mouse_check_button_pressed(mb_right) {
+  range = 64;
+  var door = raycast(x, y, z, camera_direction, range, objDoor);
+  if door != noone {
+    with (door) {
+      alarm[1] = 1;
+    }
+  }
 }
 
 shake *= 0.5;

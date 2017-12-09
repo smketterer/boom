@@ -1,6 +1,7 @@
 /// @description Draw application surface and shader.
 
 draw_set_font(font_small);   // Add the UI font.
+
 shader_set(shader_gameboy);  // Activate Shader.
 var palette = 1;
 
@@ -29,6 +30,9 @@ var gun_x = window_get_width()/2 + bob_horizontal + round(random_range(-shake,sh
 var gun_y = window_get_height()+(round(hud_offset/8 - (hud_offset / 2)/8)*8)- 4 - hud_scale + bob_vertical + round(random_range(-shake,shake)) * 8 * scale_adjustment;
 
 // Draw the weapons.
+if weapon == "fists" {
+  draw_sprite_ext(sprFists,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
+}
 if weapon == "pistol" {
   draw_sprite_ext(sprPistol,image_index,gun_x,gun_y,8*scale_adjustment,8*scale_adjustment,0,c_white,1);
 }

@@ -39,10 +39,10 @@
             }
         },
         {
-            "Key": "093e0554-9a77-44c0-9ada-3b215934c7d2",
+            "Key": "0b8a383e-cb9e-47b2-87bd-0023d5c154ee",
             "Value": {
-                "id": "223573d4-5b77-4241-80cd-306e43f0d529",
-                "resourcePath": "sprites\\sprDoor2\\sprDoor2.yy",
+                "id": "3cce0a78-be17-4bc0-864c-32165c44f9a2",
+                "resourcePath": "sprites\\sprMiscTexture\\sprMiscTexture.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -60,6 +60,14 @@
                 "id": "4841d1cc-6d3a-411b-ad12-2e0f2625f81e",
                 "resourcePath": "sounds\\sndRadio\\sndRadio.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "117535db-5270-41fd-8916-fa911d991984",
+            "Value": {
+                "id": "c492b0cc-b2d9-4029-93d1-a5ab35c82d95",
+                "resourcePath": "sprites\\sprPistol\\sprPistol.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -391,6 +399,14 @@
             }
         },
         {
+            "Key": "6e527f62-32db-4c5c-9ed4-78bd5dc5c369",
+            "Value": {
+                "id": "64058bec-935f-4471-98e2-c43ab30d9253",
+                "resourcePath": "sprites\\sprDoor2\\sprDoor2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7058ddda-16dd-48d6-845e-d480b59dec50",
             "Value": {
                 "id": "c799cfe6-b192-40fb-bfa0-226361e8a8ce",
@@ -556,6 +572,14 @@
                 "id": "4919fd17-323f-45f5-b6e3-3db7b77993e1",
                 "resourcePath": "sprites\\sprAngle2\\sprAngle2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d62e75d-36f1-4734-a6bf-043945cbe30a",
+            "Value": {
+                "id": "65660916-1938-43d5-84c7-b4cc66ad076e",
+                "resourcePath": "objects\\objDoorLeftRight\\objDoorLeftRight.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -834,7 +858,7 @@
             "Key": "ee31f749-99c3-4dad-9d79-54813f5caf42",
             "Value": {
                 "id": "3bc1e24d-317b-4e8d-bdd9-cffc0e195756",
-                "resourcePath": "sprites\\sprPistol\\sprPistol.yy",
+                "resourcePath": "sprites\\sprFists\\sprFists.yy",
                 "resourceType": "GMSprite"
             }
         },
