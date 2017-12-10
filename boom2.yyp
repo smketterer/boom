@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "45d13dc5-86f9-4d32-9b29-d9b5680d25a8",
+            "Value": {
+                "id": "b6371391-3874-4555-aff3-2e400e86a5c0",
+                "resourcePath": "sounds\\sndDoorOpen\\sndDoorOpen.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4664755d-f193-48b7-8204-4970ef5a4786",
             "Value": {
                 "id": "e616ea4d-bc28-4564-950b-5d96246b3bc1",
@@ -471,6 +479,14 @@
             }
         },
         {
+            "Key": "85f269b5-7e21-48e0-b837-bfb09cb76300",
+            "Value": {
+                "id": "6263e02a-a3cc-424a-b35d-9abee8292b8d",
+                "resourcePath": "sounds\\sndDoorClose\\sndDoorClose.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8698436c-06af-4542-b804-42ce3cbed178",
             "Value": {
                 "id": "307c885d-26ff-48aa-bbac-86d02a040bf8",
@@ -580,6 +596,14 @@
                 "id": "65660916-1938-43d5-84c7-b4cc66ad076e",
                 "resourcePath": "objects\\objDoorLeftRight\\objDoorLeftRight.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9fe87d1a-607f-49ae-abd3-022eb38da2c5",
+            "Value": {
+                "id": "b4e1e1e6-e3c3-46e8-bc8e-a909b1a2d48e",
+                "resourcePath": "views\\9fe87d1a-607f-49ae-abd3-022eb38da2c5.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
