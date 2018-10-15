@@ -1,20 +1,22 @@
-shake = objPlayer.shake;
+var shake = objPlayer.shake;
 
-x = objPlayer.x + random_range(-shake,shake);
-y = objPlayer.y + random_range(-shake,shake);
-z = objPlayer.z + random_range(-shake,shake);
-direction = objPlayer.camera_direction;
+var current_x = objPlayer.x + random_range(-shake,shake);
+var current_y = objPlayer.y + random_range(-shake,shake);
+var current_z = objPlayer.z + random_range(-shake,shake);
+var current_direction = objPlayer.camera_direction;
 
 // Apply mouselook.
-display_w=display_get_width();
-display_h=display_get_height();
-change_x=(display_mouse_get_x()-display_w/2)/9;
+var display_w=display_get_width();
+var display_h=display_get_height();
+var change_x=(display_mouse_get_x()-display_w/2)/9;
 display_mouse_set(display_w/2,display_h/2);
 objPlayer.camera_direction -= change_x;
 
-xx = lengthdir_x(1,direction);
-yy = lengthdir_y(1,direction);
-zz = z;
+var xx = lengthdir_x(1,current_direction);
+var yy = lengthdir_y(1,current_direction);
 
-var matrix=matrix_build_lookat(x, y, z, x+xx, y+yy, z, 0, 0, 1);
+var matrix=matrix_build_lookat(current_x, current_y, current_z, current_x+xx, current_y+yy, current_z, 0, 0, 1);
 camera_set_view_mat(view_camera[0], matrix);
+
+// var matrix=matrix_build_lookat(objPlayer.x, objPlayer.y, objPlayer.z, objPlayer.x+1, objPlayer.y, objPlayer.z, 0, 0, 1);
+// camera_set_view_mat(view_camera[0], matrix);
