@@ -1,7 +1,6 @@
 /// @description Draw application surface and shader.
 
 draw_set_font(font_small);   // Add the UI font.
-
 shader_set(shader_gameboy);  // Activate Shader.
 var palette = 1;
 
@@ -21,6 +20,8 @@ shader_reset(); // Disable Shader.
 // Viewport Width  = 960px
 // Viewport Height = 540px
 // Hud Height = 18px
+
+gpu_set_fog(false, c_black, 100, 300);
 
 var scale_adjustment = window_get_width() / view_get_wport(0);
 var hud_scale = 18 * 4 * scale_adjustment;

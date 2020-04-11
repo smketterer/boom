@@ -13,8 +13,6 @@ window_set_cursor(cr_none);
 // Setup z writing.
 gpu_set_ztestenable(true);
 gpu_set_zwriteenable(true);
-fog_color = c_black;
-gpu_set_fog(true, fog_color, 100, 300);
 gpu_set_alphatestenable(true);
 gpu_set_alphatestref(40);
 
@@ -27,8 +25,6 @@ camera_set_proj_mat(camera, projection_matrix);
 view_set_camera(0, camera);
 
 // Camera script that controls positioning and mouselook.
-display_width = display_get_width();
-display_height = display_get_height();
 camera_set_update_script(camera, camera_update);
 
 // Setup some player options.
